@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Test</title>
+<script type="text/javascript">
+function submitform() {
+  // document.getElementById("form5").action = "http://wa.me/"+document.getElementById("phone").value 
+  //             + 
+  //             "?text=" + document.getElementById("message").value;
+  // return true;
+  url = "http://wa.me/"+document.getElementById("phone").value 
+              + 
+             "?text=" + document.getElementById("message").value;
+  window.open(
+              url, "_blank");
+}
+</script>
+</head>
+<body>
+<h1> Send whatsapps message </h1>
+<form id="form5" name="form5" method="get"  enctype="multipart/form-data" onsubmit="submitform()" > 
+
+<input name="phone" type="text" placeholder = "919415120302"  id="phone" style= "height: 40px; width: 100%;" />
+<br>
+<br>
+<input name="message" type="text" placeholder = "message"  id="message" style= "height: 100px; width: 100%;" />
+<br>
+<br>
+<input name="Send" type="submit" class="submit" id="Send" value="Send" onclick="submitform()"
+style= "width: 100px; background-color: blue; color: cornsilk; font-size: 24px; padding: 10px;"
+/>
+</form>
+</body>
+</html>
